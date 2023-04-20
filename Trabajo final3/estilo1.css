@@ -1,0 +1,203 @@
+/* Estilos CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url(tipica.jpg);
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 20px; */
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedorTitulo {
+  background-color: #490909;
+  display: flex;
+  height: 3.5em;
+  justify-content: center;
+}
+
+.contenedorTitulo h1 {
+  color: white;
+  height: 1.5em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.historia {
+  margin-bottom: 5%
+}
+
+.columnas{
+  column-count: 3;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.parrafo {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 60%;
+
+}
+
+.menu-item {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #490909;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  /* border: solid 2px red; */
+  border-radius: 10px;
+}
+
+.menu-item img {
+  border-radius: 5px 5px 0 0;
+}
+
+.menu-item h3 {
+  font-size: 18px;
+  margin: 10px;
+}
+
+.menu-item p {
+  font-size: 14px;
+  margin: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff9f1c;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #ffbf69;
+}
+
+.listaItem {
+  width: 85%;
+  /* border: solid 2px blue; */
+  padding: 3px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  text-shadow: 0px 0px 20px #ffffff;
+}
+
+.containerForm {
+  background-color: beige;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  justify-content: center;
+  float: right;
+}
+
+.containerForm h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#formularioReserva {
+  /* border: solid 1px blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerForm div {
+  width: 90%;
+  /* border: solid 1px red */
+}
+
+
+.error {
+  color: red;
+}
+
+
+.divPrueba {
+  width: 100%;
+  height: 500px;
+  border: solid 1px red;
+}
+
+#arepas {
+  scroll-behavior: smooth;
+}
+
+#datos {
+  color: white;
+  font-size: 16px;
+}
+
+.textoBienvenida {
+  height: 30px;
+  width: 100%;
+  background-color: #490909;
+}

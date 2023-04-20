@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="icono.ico" type="image/ico" />
+  <link rel="stylesheet" href="estilo1.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <title> Comida Venezolana</title>
+
+
+</head>
+
+
+<body onload="abrirModal()">
+  <div class="textoBienvenida">
+    <marquee>
+      <p id="datos"></p>
+    </marquee>
+  </div>
+  <header>
+
+    <img src="Imagenes/icons8-venezuela-100.png" alt="logo" width="100">
+  </header>
+  <div class="contenedorTitulo">
+    <h1> El Sazón Venezolano</h1>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Bienvenido</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputName">Nombre</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+              <label for="inputComment">Contanos como nos conociste</label>
+              <textarea class="form-control" id="inputComment" rows="3" placeholder="..."></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" onclick="guardarDatos()">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav>
+    <div class="menu">
+      <div class="menu-item">
+        <ul class="listaItem">
+          <li class="listadosMenu"> <a href="#arepas"><span> Arepas </span></a></li>
+          <li class="listadosMenu"> <a href="#hallacas"> Hallacas</a></li>
+          <li class="listadosMenu"> <a href="#pabellon"> Pabellón Criollo </a></li>
+          <li class="listadosMenu"> <a href="#empanadas"> Empanadas </a></li>
+          <li class="listadosMenu"> <a href="#cachapas"> Cachapas</a></li>
+          <li class="listadosMenu"> <a href="#asado"> Asado negro </a></li>
+        </ul>
+  </nav>
+  <div class="container">
+    <div class="historia">
+      <h2>Nuestra Historia</h2>
+      <p class="parrafo">Somos una organización que nació con el objetivo de llevar los sabores auténticos de la comida
+        venezolana
+        a todo el mundo. Fundada en el año 2013 por un grupo de amigos apasionados por la gastronomía,
+        hoy en día contamos con varios restaurantes en distintos países y seguimos expandiéndonos.</p>
+      </div>
+      <div class="columnas">
+    <column>
+      <h4> Geiser </h4>
+      <p>
+        Nacida en el país que inspiró nuestro emprendimiento, a partir de expresar su deseo de compartir tanto los sabores únicos como su cultura con personas de todo el mundo. 
+      </p>
+    </column>
+    <column>
+      <h4> Joaquín </h4>
+      <p>
+        Quien puso cuerpo al proyecto, aportando sus conocimientos en el mundo empresarial y el liderazgo necesario para que todo funcione a la perfección durante estos años.
+        <br>
+      </p>
+    </column>
+    <column>
+      <h4> Camila </h4>
+      <p>
+        Encargada de marketing, haciendo navegar nuestro emprendimiento en la web y llevándolo a cada rincón de sudamérica y el mundo. 
+      </p>
+    </column>
+  </div>
+    </div>
+
+
+
+    <div class="containerForm">
+      <h2>Reservas</h2>
+      <div class="">
+        <!-- FORM -->
+        <form id="formularioReserva" method="post">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+            <div id="error"></div>
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="dni">DNI:</label>
+            <input type="number" class="form-control" id="dni" name="dni" required>
+            <div id="errorInput"></div>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="number" class="form-control" id="telefono" name="telefono" required>
+          </div>
+          <div class="form-group">
+            <label for="cantidad">Cantidad de reservas:</label>
+            <input type="number" class="form-control" id="cantidad" name="cantidad" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- GALERIA -->
+    <div class="contenedorMenu">
+      <h2 class="text-center">Productos</h2>
+    </div>
+
+    <div class="row ms-auto" style="width: 60%">
+      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <img src="./Imagenes/imagen-0.jpg" class="w-100 object-fit-cover shadow-1-strong rounded mb-4"
+          alt="Boat on Calm Water" />
+
+        <img src="./Imagenes/imagen-1.jpg" class="w-100 object-fit-cover shadow-1-strong rounded mb-4"
+          alt="Wintry Mountain Landscape" />
+      </div>
+
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img src="./Imagenes/imagen-2.jpg" class="w-60 object-fit-cover shadow-1-strong rounded mb-4"
+          alt="Mountains in the Clouds" />
+
+        <img src="./Imagenes/imagen-3.jpg" class="w-60 object-fit-cover shadow-1-strong rounded mb-4"
+          alt="Boat on Calm Water" />
+      </div>
+
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img src="./Imagenes/imagen-4.jpg" class="w-60 object-fit-cover shadow-1-strong rounded mb-4"
+          alt="Waves at Sea" />
+
+        <img src="./Imagenes/imagen-5.jpg" class="w-60 object-fit-cover shadow-1-strong rounded mb-4"
+          alt="Yosemite National Park" />
+      </div>
+    </div>
+
+
+
+
+    <div class="d-flex flex-column justify-content-center" style="width: 100%">
+      <h2 class="d-flex justify-content-center">Ubicación</h2>
+      <div class="d-flex justify-content-center" style=" margin-bottom: 10%;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13104.480589853743!2d-58.463334!3d-34.802919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd3041d1885c9%3A0xb088831e951b10ec!2sEl%20Saz%C3%B3n%20Venezolano!5e0!3m2!1ses-419!2sar!4v1682007643874!5m2!1ses-419!2sar"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="">
+    <footer class="text-center text-lg-start" style="background-color: #490909;">
+      <div class="container d-flex justify-content-center py-5" style="background-color: #490909">
+        <button type="button" class="btn  btn-lg btn-floating mx-2">
+          <i class="bi bi-facebook"></i>
+        </button>
+        <button type="button" class="btn  btn-lg btn-floating mx-2">
+          <i class="bi bi-youtube"></i>
+        </button>
+        <button type="button" class="btn btn-lg btn-floating mx-2">
+          <i class="bi bi-instagram"></i>
+        </button>
+        <button type="button" class="btn btn-lg btn-floating mx-2">
+          <i class="bi bi-twitter"></i>
+        </button>
+      </div>
+
+
+      <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href=""></a>
+      </div>
+
+    </footer>
+    <!-- FIN F¿OOTER -->
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
