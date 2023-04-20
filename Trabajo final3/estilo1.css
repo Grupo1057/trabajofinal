@@ -56,10 +56,6 @@ img {
   margin-bottom: 5%
 }
 
-.columnas{
-  column-count: 3;
-}
-
 h2 {
   font-weight: bold;
 }
@@ -173,6 +169,11 @@ a:hover {
 .containerForm div {
   width: 90%;
   /* border: solid 1px red */
+}
+
+.containerForm input {
+  /* width: 85%; */
+
 }
 
 
